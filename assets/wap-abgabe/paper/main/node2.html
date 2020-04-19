@@ -1,55 +1,90 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<!--Converted with LaTeX2HTML 2020 (Released January 1, 2020) -->
-<HTML lang="en">
+<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
+<HTML>
 <HEAD>
-<TITLE>GPU vs. CPU</TITLE>
-<META NAME="description" CONTENT="GPU vs. CPU">
+<TITLE>Geschichte</TITLE>
+<META NAME="description" CONTENT="Geschichte">
 <META NAME="keywords" CONTENT="main">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
-<META NAME="Generator" CONTENT="LaTeX2HTML v2020">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
 <LINK REL="next" HREF="node3.html">
 <LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="main.html">
 <LINK REL="next" HREF="node3.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A
- HREF="node3.html">
-<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
-<A
- HREF="main.html">
-<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
-<A
- HREF="node1.html">
-<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<A NAME="tex2html43"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html41"
+  HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html35"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A
- HREF="node3.html">.</A>
-<B> Up:</B> <A
- HREF="main.html">GPU Computing</A>
-<B> Previous:</B> <A
- HREF="node1.html">Geschichte</A>
+<B> N&auml;chste Seite:</B> <A NAME="tex2html44"
+  HREF="node3.html">Parallelit&#228;t in Hardware</A>
+<B> Aufw&auml;rts:</B> <A NAME="tex2html42"
+  HREF="main.html">GPU Computing</A>
+<B> Vorherige Seite:</B> <A NAME="tex2html36"
+  HREF="node1.html">Einf&#252;hrung</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A ID="SECTION00020000000000000000">
-GPU vs. CPU</A>
-</H1><SPAN CLASS="SPAN"><SPAN CLASS="SPAN"><SPAN CLASS="SPAN">
-</SPAN></SPAN></SPAN>
+<H1><A NAME="SECTION00020000000000000000">
+Geschichte</A>
+</H1>
+Die urspr&#252;ngliche Aufgabe einer Grafikkarte war es noch, Daten welche im Hauptspeicher des Systems liegen irgendwie in elektrische Signale umzuwandeln, welche dann an den Monitor gesendet werden k&#246;nnen. 
+Das musste auch bei PC Systemen in den 1960er Jahren bereits 60 mal in der Minute durchgef&#252;hrt werden. 
+Mit dem Aufkommen von immer aufwendigeren Graphical User Interfaces (GUI), wurden Berechnungen f&#252;r eben diese bereits von der CPU auf die GPU ausgelagert, sodass die Grafikkarte schlie&#195;&#159;lich zum 2D Beschleuniger wurde.
+Die Architektur dieser GPU's war noch auf wenige Befehle eingeschr&#228;ngt und wenig flexibel.
+Den wirklichen Ausl&#246;ser f&#252;r den Boom im Grafikkartenmarkt brachten aber vor allem 3D Spiele. [<A
+ HREF="node19.html#conf">1</A>]
+Das zugrundeliegende Problem hierbei ist hierbei das Rendering einer virtuellen 3D Welt auf einen 2D Monitor.
+Hierbei m&#252;ssen Objekte geometrisch richtig in einen 3D Raum eingef&#252;gt werden, was &#252;ber verschiedene Vektoren beschrieben wird. 
+Zus&#228;tzlich muss noch die Oberfl&#228;chenstruktur (Textur), Lichtquellen, Schatten und die Perspektive des Betrachters mit ein bezogen werden.
+Bei hochaufl&#246;senden Texturen ist das nat&#252;rlich wahnsinnig aufwendig zu berechnen.
+Noch versch&#228;rft wird diese Situation dadurch, dass in Spielen diese Szenen 60 mal in der Sekunde berechnet werden m&#252;ssen um den Echtzeitanforderungen gerecht zu werden.
+Deshalb wurde aus dem 2D Beschleuniger dann ganz schnell ein 3D Beschleuniger um diesen Anforderungen gen&#252;ge zu tragen.
+In diesem Stadium war die Recheneinheit bereits viel komplexer und programmierbarer. [<A
+ HREF="node19.html#tr">3</A>]
+Als Nvidia schlie&#195;&#159;lich das CUDA Framework 2007 ver&#246;ffentlichte war die Zeit von GPU Computing gekommen.
+Gepaart mit einer moderneren und flexibleren Architektur konnte man die GPU nun viel leichter f&#252;r das Verarbeiten von gro&#195;&#159;en Datenmengen einsetzen.
+
 <P>
-<SPAN CLASS="SPAN"><SPAN CLASS="SPAN"><SPAN CLASS="SPAN"></SPAN></SPAN></SPAN>
-<BR><HR>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html43"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html41"
+  HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html35"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> N&auml;chste Seite:</B> <A NAME="tex2html44"
+  HREF="node3.html">Parallelit&#228;t in Hardware</A>
+<B> Aufw&auml;rts:</B> <A NAME="tex2html42"
+  HREF="main.html">GPU Computing</A>
+<B> Vorherige Seite:</B> <A NAME="tex2html36"
+  HREF="node1.html">Einf&#252;hrung</A></DIV>
+<!--End of Navigation Panel-->
 
 </BODY>
 </HTML>

@@ -1,58 +1,64 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<!--Converted with LaTeX2HTML 2020 (Released January 1, 2020) -->
-<HTML lang="en">
+<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
+<HTML>
 <HEAD>
-<TITLE>.</TITLE>
-<META NAME="description" CONTENT=".">
+<TITLE>Parallelit&#228;t in Hardware</TITLE>
+<META NAME="description" CONTENT="Parallelit&#228;t in Hardware">
 <META NAME="keywords" CONTENT="main">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
-<META NAME="Generator" CONTENT="LaTeX2HTML v2020">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
 <LINK REL="next" HREF="node4.html">
 <LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="main.html">
 <LINK REL="next" HREF="node4.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A
- HREF="node4.html">
-<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
-<A
- HREF="main.html">
-<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
-<A
- HREF="node2.html">
-<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<A NAME="tex2html53"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html51"
+  HREF="main.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html45"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A
- HREF="node4.html">Bibliography</A>
-<B> Up:</B> <A
- HREF="main.html">GPU Computing</A>
-<B> Previous:</B> <A
- HREF="node2.html">GPU vs. CPU</A>
+<B> N&auml;chste Seite:</B> <A NAME="tex2html54"
+  HREF="node4.html">Unterst&#252;tze Konzepte</A>
+<B> Aufw&auml;rts:</B> <A NAME="tex2html52"
+  HREF="main.html">GPU Computing</A>
+<B> Vorherige Seite:</B> <A NAME="tex2html46"
+  HREF="node2.html">Geschichte</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A ID="SECTION00030000000000000000">.</A>
+<H1><A NAME="SECTION00030000000000000000">
+Parallelit&#228;t in Hardware</A>
+</H1>
+Die Architektur einer modernen Grafikkarte ist auf hohen Durchsatz ausgelegt. Das hei&#195;&#159;t es wird prim&#228;r darauf wert gelegt, dass viele Daten auf einmal verarbeitet werden. Dabei werden 2 Kernkonzepte umgesetzt. 
+In erster Linie wird versucht mehr kleine (einfachere) Kerne parallel laufen zu haben. [<A
+ HREF="node19.html#col">4</A>]
+Au&#195;&#159;erdem werden in diesen Kernen m&#246;glichst viele Arithmetische Einheiten untergebracht (ALU). 
+Diese vereinfachten Kerne (Shader) bauen auf einem anderen Programmiermodel auf. 
+Sogenanntes Streamprocessing, bei dem sich zwar der ganze Shader den Instructionstream teilt, jedoch die Datenfragmente andere sind. 
+Das schr&#228;nkt das Programmiermodel massiv ein und ist nicht mit herk&#246;mlichen CPU Threads vergleichbar.
+Hierbei muss allerdings beachtet werden, dass diese Shader nicht nur einfache Single-Instruction-Multiple-Data (SIMD) Befehle untersch&#252;tzen.
+Es wird zum Beispiel auch Branching in Hardware untersch&#252;tzt.
+Damit das effizient umgesetzt werden kann, m&#252;ssen die Shader mehrere Ausf&#252;hrungskontexte speichern k&#246;nnen und zwischen diesen umschalten k&#246;nnen um Stalls zu vermeiden.
 
-</H1><SPAN CLASS="SPAN"><SPAN CLASS="SPAN"><SPAN CLASS="SPAN">
-</SPAN></SPAN></SPAN>
 <P>
-<SPAN CLASS="SPAN"><SPAN CLASS="SPAN"><SPAN CLASS="SPAN">[#!MoreVMs18!#] 
-</SPAN></SPAN></SPAN>
-<P>
-<SPAN CLASS="SPAN"><SPAN CLASS="SPAN"><SPAN CLASS="SPAN">
-</SPAN></SPAN></SPAN>
 <BR><HR>
 
 </BODY>

@@ -1,40 +1,42 @@
-\documentclass[a4paper]{article}
-%% Detect latex/pdflatex
-\usepackage[utf8]{inputenc} % this is needed for umlauts
-\usepackage[ngerman]{babel} % this is needed for umlauts
-%\usepackage{hyperref}
-\usepackage[T1]{fontenc}    % this is needed for correct output of umlauts in pdf
+%
+%  $Description: Author guidelines and sample document in LaTeX 2.09/2e$ 
+%
+%  $Author: ienne $
+%  $Date: 1995/09/15 15:20:59 $
+%  $Revision: 1.4 $
+%
+
+% \documentstyle[times,twocolumn,latex8]{article} % LaTeX 2.09
+
+\documentclass[10pt,twocolumn]{article}          % LaTeX 2e 
+\usepackage{latex8}                              % LaTeX 2e 
+\usepackage{times}                               % LaTeX 2e 
 \usepackage{graphicx}
 \usepackage{cite}
 \usepackage{times}
-\usepackage{ifpdf,ifluatex} 
+\usepackage[utf8]{inputenc} % this is needed for umlauts
+\usepackage[ngerman]{babel} % this is needed for umlauts
+\usepackage[T1]{fontenc}    % this is needed for correct output of umlauts in pdf
 
-% set colors for links and URLs
-\usepackage[
-	colorlinks=false,
-  hidelinks
-]{hyperref}
+%------------------------------------------------------------------------- 
+% take the % away on next line to produce the final camera-ready version 
+%\pagestyle{empty}
 
-\ifpdf
-    \typeout{^^J *** PDF mode *** } 
-\else
-    \typeout{^^J *** DVI mode ***} 
-\fi 
+%------------------------------------------------------------------------- 
+\begin{document}
 
 \title{GPU Computing}
-\author{Christian M\"osl \\ \small{University of Salzburg} \\ \small{Austria} \\ \small{cmoesl@cs.uni-salzburg.at}}
-\date{\vspace{-5ex}}
 
-\begin{document}
+\author{Christian M\"osl\\
+University of Salzburg \\ 5020 Salzburg, Austria \\ cmoesl@cs.uni-salzburg.at\\
+}
+
 \maketitle
+\thispagestyle{empty}
 
-% typically one paragraph of 50–300 words
-% What has been done or achieved?
-% What are the main results?
 \begin{abstract}
 GPU Computing zieht starkes Interesse auf sich, seit dem Machine Learning einen wahnsinnigen Boom erf\"ahrt. 
 In dieser Arbeit wird die Geschichte von GPU Computing erkl\"art und welche Probleme gel\"ost werden.
-Source: \url{https://github.com/ChristianMoesl/ChristianMoesl.github.io/tree/master/assets/wap-abgabe}
 \end{abstract}
 
 \section{Einf\"uhrung}
@@ -125,7 +127,7 @@ Ein Standardbenchmark ist hierbei das Messen der m\"oglichen Floating-Point Oper
 
 \begin{figure}[h]
   \begin{center}
-  \includegraphics[width=12cm]{gflops.png}
+  \includegraphics[width=8cm]{gflops.eps}
   \caption{Leistungsunterschied von GPU und CPU}
   \label{fig:flops}
   \end{center}
@@ -148,7 +150,9 @@ GPU Computing ist ein sehr popul\"ares und m\"achtiges Tool, das f\"ur viele Anw
 Vorallem mit dem Aufkommen von Machine Learning und Big Data ist das ein sehr m\"achtiges Tool um schnelle Datenverarbeitungs Pipelines zu erstellen.
 Auch gibt es klare Grenzen, denn nicht jedes Problem l\"asst sich damit schneller Berechnen. 
 
-\bibliography{main}{}
-\bibliographystyle{plain}
+
+\nocite{ex1,ex2}
+\bibliographystyle{latex8}
+\bibliography{main}
 
 \end{document}
