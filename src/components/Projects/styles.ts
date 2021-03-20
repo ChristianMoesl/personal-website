@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
-export const Skills = styled.div`
-  ${tw`flex flex-wrap w-full`};
+export const Projects = styled.div`
+  ${tw`flex flex-wrap -mx-3`};
 `;
 
-export const Skill = styled.div`
+export const ProjectItem = styled.div`
   ${tw`w-full sm:w-1/2`};
 `;

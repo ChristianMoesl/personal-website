@@ -10,7 +10,7 @@ import { SectionTitle } from 'helpers/definitions';
 
 import * as Styled from './styles';
 
-interface Service {
+interface Project {
   node: {
     id: string;
     frontmatter: {
@@ -21,16 +21,16 @@ interface Service {
   };
 }
 
-const Services: React.FC = () => {
+const Projects: React.FC = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "services section" } }) {
+      markdownRemark(frontmatter: { category: { eq: "projects section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "services" } } }, sort: { fields: fileAbsolutePath }) {
+      allMarkdownRemark(filter: { frontmatter: { category: { eq: "projects" } } }, sort: { fields: fileAbsolutePath }) {
         edges {
           node {
             id
@@ -46,27 +46,27 @@ const Services: React.FC = () => {
   `);
 
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const services: Service[] = allMarkdownRemark.edges;
+  const projects: Project[] = allMarkdownRemark.edges;
 
   return (
     <Container section>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
-      <Styled.Services>
-        {services.map((item) => {
+      <Styled.Projects>
+        {projects.map((item) => {
           const {
             id,
             frontmatter: { title, icon, description }
           } = item.node;
 
           return (
-            <Styled.ServiceItem key={id}>
+            <Styled.ProjectItem key={id}>
               <InfoBlock icon={icon} title={title} content={description} />
-            </Styled.ServiceItem>
+            </Styled.ProjectItem>
           );
         })}
-      </Styled.Services>
+      </Styled.Projects>
     </Container>
   );
 };
 
-export default Services;
+export default Projects;
